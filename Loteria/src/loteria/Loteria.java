@@ -3,19 +3,21 @@ package loteria;
 import java.util.Scanner;
 
 public class Loteria {
-
+    
     public static void main(String[] args) {
+        int[] valores = new int[6];
+        imprimeVetor(valores);
         Scanner in = new Scanner(System.in);
         System.out.println("Digite 6 numeros");
         for (int i = 0; i < 6; i++) {
             int num = -1;
             while (num == -1) {
                 num = capNum(in, i);
-
+                
             }
         }
     }
-
+    
     public static int capNum(Scanner in, int i) {
         System.out.println("Diginte o " + (i + 1) + "º numero");
         int num = in.nextInt();
@@ -24,6 +26,13 @@ public class Loteria {
         } else {
             return -1;
         }
+        
     }
-
+    
+    public static void imprimeVetor(int[] vet) {
+        for (int i = 0; i < vet.length; i++) {
+            System.out.print(vet[i]+ " ");
+            
+        }
+    }
 }
